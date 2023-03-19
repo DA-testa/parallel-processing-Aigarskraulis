@@ -4,7 +4,16 @@ def parallel_processing(n, m, data):
     output = []
     # TODO: write the function for simulating parallel tasks, 
     # create the output pairs
+time =[0]* n 
+for i on range(m):
+    thread =0
 
+    for j in range(n):
+         if time[thread] > time[j]:
+                thread = j
+output.append((thread, time[thread]))
+        time[thread] = time[thread] + data[i]
+        thread = 0
     return output
 
 def main():
